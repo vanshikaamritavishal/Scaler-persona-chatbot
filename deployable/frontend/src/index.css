@@ -1,0 +1,37 @@
+@import url("https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #ffffff;
+  color: #09090b;
+}
+
+.font-display { font-family: "Cabinet Grotesk", "IBM Plex Sans", sans-serif; letter-spacing: -0.02em; }
+
+::selection { background: #09090b; color: #ffffff; }
+
+.scroll-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #d4d4d8; }
+
+@keyframes blink-square { 0%,100%{opacity:.2} 50%{opacity:1} }
+.typing-dot { width:6px; height:6px; background:#71717a; display:inline-block; animation: blink-square 1.2s infinite; }
+.typing-dot:nth-child(2){ animation-delay:.2s }
+.typing-dot:nth-child(3){ animation-delay:.4s }
+
+.swiss-grid {
+  background-image:
+    linear-gradient(to right, #e4e4e7 1px, transparent 1px),
+    linear-gradient(to bottom, #e4e4e7 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes slide-up-fade { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+.msg-enter { animation: slide-up-fade 220ms ease-out both; }
