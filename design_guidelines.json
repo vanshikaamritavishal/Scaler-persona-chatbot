@@ -1,0 +1,114 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4: Swiss & High-Contrast",
+  "fonts": {
+    "heading": "Cabinet Grotesk",
+    "body": "IBM Plex Sans",
+    "mono": "JetBrains Mono"
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F4F4F5",
+    "border": "#E4E4E7",
+    "text_primary": "#09090B",
+    "text_secondary": "#52525B",
+    "accent_primary": "#0055FF",
+    "user_bubble_bg": "#09090B",
+    "user_bubble_text": "#FFFFFF",
+    "ai_bubble_bg": "#F4F4F5",
+    "ai_bubble_text": "#09090B"
+  },
+  "spacing_and_layout": {
+    "container": "max-w-4xl mx-auto w-full",
+    "spacing_scale": "generous (p-6, p-8, p-12)",
+    "border_radius": "rounded-none or rounded-sm (2px-4px) for sharp, technical feel",
+    "sidebar_width": "w-72 or w-80 on desktop"
+  },
+  "components": {
+    "persona_switcher": {
+      "style": "Left sidebar on desktop, horizontal scrolling tabs or bottom sheet on mobile.",
+      "item_style": "Sharp rectangle, 1px border. Active state: pure white bg, black left border (border-l-4 border-black). Inactive state: transparent bg, subtle text.",
+      "avatar": "Square boxes with initials, font-bold, bg-zinc-100 text-black."
+    },
+    "chat_area": {
+      "style": "Clean white background. Ample padding.",
+      "empty_state": "Centered. Large heading using Cabinet Grotesk. Subtitle in IBM Plex Sans. Abstract tech grid background with 20% opacity.",
+      "message_list": "Vertical stack with gap-6. No dividing lines between messages."
+    },
+    "message_bubbles": {
+      "user": "Sharp rectangles with 4px border-radius. bg-zinc-950 text-white. Left-aligned text.",
+      "ai": "Sharp rectangles with 4px border-radius. bg-zinc-100 text-zinc-950. Left-aligned text.",
+      "avatar_alignment": "Top-aligned with message text."
+    },
+    "typing_indicator": {
+      "style": "Minimalist. 3 tiny square dots (w-2 h-2 bg-zinc-400) blinking in sequence (opacity animation, NOT bouncing). No bouncy balls."
+    },
+    "suggestion_chips": {
+      "style": "Sharp rectangular borders (border border-zinc-200), transparent bg. Hover: border-zinc-950 text-zinc-950 bg-zinc-50 transition-colors. text-sm font-medium tracking-tight. Left aligned text inside."
+    },
+    "input_bar": {
+      "style": "Sticky at bottom. 1px border border-zinc-300 bg-white. focus-within:ring-2 focus-within:ring-black. Send button is a stark black square with a white arrow icon."
+    }
+  },
+  "personas": [
+    {
+      "id": "anshuman",
+      "name": "Anshuman Singh",
+      "role": "Co-founder & Engineer",
+      "initials": "AS",
+      "tone": "Blunt, direct, motivating, system-design focused.",
+      "suggestions": ["How do I crack MAANG?", "Explain consistent hashing", "Review my resume strategy"]
+    },
+    {
+      "id": "abhimanyu",
+      "name": "Abhimanyu Saxena",
+      "role": "Co-founder & Product",
+      "initials": "AB",
+      "tone": "Strategic, product-minded, career-growth oriented.",
+      "suggestions": ["How to transition to Product Management?", "Scaling an engineering team", "Startup vs Corporate"]
+    },
+    {
+      "id": "kshitij",
+      "name": "Kshitij Mishra",
+      "role": "Tech Educator",
+      "initials": "KM",
+      "tone": "Calm, analytical, step-by-step problem solver.",
+      "suggestions": ["Explain Dynamic Programming", "Help me debug a React issue", "Best resources to learn DSA"]
+    }
+  ],
+  "media": {
+    "background_grid": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/2e9504aa-0eb4-4286-b518-e36f83f3a582/images/5db34a62a4740a7ba69b65ba4a364c9a9213b28cf1b7f75b21d147dd96c69a20.png",
+      "description": "Abstract Swiss grid used for the empty state background or sidebar texture."
+    },
+    "avatar_placeholder": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/2e9504aa-0eb4-4286-b518-e36f83f3a582/images/001885ba9aa7a12c306387692d73ff4f69cff36bcde1347d2d9fda2c475d000d.png",
+      "description": "Optional generic tech educator avatar for welcome card."
+    },
+    "desk_image": {
+      "url": "https://images.unsplash.com/photo-1627929994715-997356049549?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwZGVzayUyMGxhcHRvcHxlbnwwfHx8fDE3Nzc0ODIxMzl8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Minimal desk image. Can be used in onboarding/welcome empty state if needed."
+    }
+  },
+  "testing": {
+    "required_attributes": [
+      "data-testid=\"persona-tab-{id}\"",
+      "data-testid=\"chat-input\"",
+      "data-testid=\"send-button\"",
+      "data-testid=\"message-user\"",
+      "data-testid=\"message-ai\"",
+      "data-testid=\"suggestion-chip\"",
+      "data-testid=\"typing-indicator\"",
+      "data-testid=\"empty-state-welcome\""
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Use pure HTML/Tailwind for the layout structure, maintaining the Swiss High-Contrast aesthetic.",
+    "Do NOT use standard rounded cards. Everything should be slightly brutalist: sharp corners (rounded-sm max), 1px solid borders, pure white and deep black contrasts.",
+    "Use Phosphor Icons (sharp/regular weight) or Lucide icons to match the thin line aesthetic.",
+    "Ensure the persona switcher clearly resets the chat state upon clicking a new persona.",
+    "Apply data-testid to all interactive and key elements.",
+    "Use Cabinet Grotesk for Headings/Names, IBM Plex Sans for body text.",
+    "Do NOT use any gradients. Solid colors only."
+  ]
+}
