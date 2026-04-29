@@ -180,26 +180,3 @@ Errors return `{ "detail": "..." }` with codes `400` (bad input), `401` (bad key
 
 ---
 
-## Final assignment checklist
-
-- [x] 3 personas (Anshuman / Abhimanyu / Kshitij)
-- [x] Real LLM API used (Groq, free tier)
-- [x] Clean chat UI with persona switching
-- [x] Chat **resets** on persona switch
-- [x] **Typing indicator** while AI is thinking
-- [x] **Suggestion chips** per persona
-- [x] **Mobile responsive** layout
-- [x] System prompts include: persona description, communication style, beliefs, **3+ few-shot examples**, chain-of-thought hint, output format, constraints
-- [x] API keys stored in `.env`, not hard-coded
-- [x] `.env.example` provided
-- [x] `README.md` with setup + env vars + deployment
-- [x] `prompts.md` with all 3 prompts and design comments
-- [x] `reflection.md` (300–500 words)
-- [x] Tech stack: React (Vite) + Node/Express
-- [x] Deployable on Vercel + Render
-
----
-
-## License
-
-MIT
