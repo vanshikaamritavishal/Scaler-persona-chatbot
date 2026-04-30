@@ -8,7 +8,7 @@ A clean, minimal AI chatbot that lets you talk to **3 distinct personas** modell
 
 Built with **React (Vite)** + **Node.js (Express)** + **Groq API** (free, fast LLM inference using `llama-3.3-70b-versatile`).
 
-> **Live demo:** 
+> **Live demo:** https://persona-chatbot-sooty.vercel.app/
 
 ---
 
